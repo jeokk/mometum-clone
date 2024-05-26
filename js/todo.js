@@ -12,7 +12,7 @@ function saveToDo(toDos) {
 
 function deleteToDo() {
   const li = this.parentElement;
-  const indexToRemove = Array.prototype.indexOf.call(toDoList.children, li);
+  const indexToRemove = Array.from(toDoList.children).indexOf(li);
   li.remove();
   toDos.splice(indexToRemove, 1);
   saveToDo(toDos);
