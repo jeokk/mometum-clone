@@ -15,16 +15,8 @@ function handleLoginFormSubmit(event) {
   event.preventDefault();
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
-  loginForm.classList.add(HIDDEN_CLASSNAME);
+  weatherContainer.classList.remove(HIDDEN_CLASSNAME);
+  loginForm.classList.add(HIDDEN_CLASSNAME, "none");
+  clock.classList.remove(HIDDEN_CLASSNAME);
   paintGreeting(username);
-}
-
-const savedUsername = localStorage.getItem(USERNAME_KEY);
-if (savedUsername === null) {
-  // show the form
-  loginForm.classList.remove(HIDDEN_CLASSNAME);
-  loginForm.addEventListener("submit", handleLoginFormSubmit);
-} else {
-  // show greeting
-  paintGreeting(savedUsername);
 }

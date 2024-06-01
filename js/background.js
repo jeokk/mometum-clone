@@ -14,4 +14,5 @@ const images = [
 const todaysImg = images[Math.floor(Math.random() * images.length)];
 const backgroundImg = document.createElement("img");
 backgroundImg.src = `img/${todaysImg}`;
+backgroundImg.classList.add("background");
 document.body.appendChild(backgroundImg);

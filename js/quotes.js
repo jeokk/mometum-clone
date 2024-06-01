@@ -1,3 +1,5 @@
+const quoteContainer = document.querySelector("#quotes");
+
 const quotes = [
   {
     quote: "Life is what happens when you're busy making other plans.",
@@ -47,4 +49,4 @@ const author = document.querySelector("#quotes p:nth-child(2)");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
-author.innerText = todaysQuote.author;
+author.innerText = `-${todaysQuote.author}-`;

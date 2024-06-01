@@ -1,0 +1,27 @@
+#weather {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 400px;
+  box-sizing: border-box;
+  border: 1px sold wheat;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin-top: 10px;
+  margin-right: 20px;
+  font-size: 14px;
+}
+
+#weather span {
+  padding: 5px;
+}
+
+#weather i {
+  margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+  #weather {
+    visibility: hidden;
+  }
+}

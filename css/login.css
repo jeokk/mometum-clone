@@ -1,0 +1,31 @@
+#login-form,
+#greeting {
+  margin-top: 25px;
+  font-size: 50px;
+  width: 500px;
+  text-align: center;
+  text-shadow: inherit;
+}
+#login-form p {
+  font-size: 36px;
+}
+
+#login-form input {
+  border: none;
+  border-bottom: 3px solid white;
+  background: none;
+  color: inherit;
+  text-shadow: inherit;
+  font-size: inherit;
+  margin-top: 20px;
+  padding: 0 5px;
+  text-align: center;
+}
+
+#login-form input:focus {
+  outline: none;
+}
+
+#login-form button {
+  display: none;
+}

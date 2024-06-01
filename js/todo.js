@@ -18,14 +18,21 @@ function deleteToDo() {
   saveToDo(toDos);
 }
 
+function checkDoneToDo() {
+  this.parentElement.classList.toggle("done");
+}
+
 function paintToDo(toDo) {
   const li = document.createElement("li");
-  const span = document.createElement("span");
-  span.innerText = toDo;
+  const span1 = document.createElement("span");
+  const span2 = document.createElement("span");
+  li.appendChild(span1);
+  span1.addEventListener("click", checkDoneToDo);
+  span2.innerText = toDo;
   const button = document.createElement("button");
   button.innerText = "Ⅹ";
   button.addEventListener("click", deleteToDo);
-  li.appendChild(span);
+  li.appendChild(span2);
   li.appendChild(button);
   toDoList.appendChild(li);
 }
